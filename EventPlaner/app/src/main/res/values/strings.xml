@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">EventPlaner</string>
+
+
+
+// Strings for MainActivityFragmentFooter
+
+    <string name="Taskstring">Aufgaben</string>
+    <string name="NewEventstring">Neuer Event</string>
+    <string name="Settingstring">Einstellungen</string>
+
+// Strings for MainActivityFragmentHeader
+
+    <string name="HeaderName">OrganizEm</string>
+    <string name="Profilname">Hans Wurst</string>
+
+// Strings for MainActivityFragmentHeader
+
+    <string name="MainMenuListFiller1">OrganizEm1</string>
+    <string name="MainMenuListFiller2">OrganizEm2</string>
+    <string name="MainMenuListFiller3">OrganizEm3</string>
+    <string name="MainMenuListFiller4">OrganizEmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
+
 </resources>

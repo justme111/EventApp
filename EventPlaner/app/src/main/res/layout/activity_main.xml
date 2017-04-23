@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<fragment
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment"
-    android:name="gldev.eventplaner.MainActivityFragment"
-    tools:layout="@layout/fragment_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+
+    // Header Fragment
+    // includes AppName and Profil/picture
+    <fragment android:id="@+id/HeaderMainMenu"
+        class="gldev.eventplaner.MainMenuHeaderFragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        />
+    // List Fragment
+    // creates ListLayout with interactable MenuPoints
+    <fragment android:id="@+id/ListMainMenu"
+        class="gldev.eventplaner.MainMenuListFragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+
+        />
+    // Footer Fragment
+    // includes 3 Buttons to change to other Activities (Tasks, Survey, Settings)
+
+    <fragment android:id="@+id/FooterMainMenu"
+        class="gldev.eventplaner.MainMenuFooterFragment"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+
+        />
+
+</LinearLayout>

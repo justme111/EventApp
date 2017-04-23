@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/HeaderMainMenuName"
+        android:background="@color/colorBar"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+
+        android:text="@string/HeaderName"
+        android:textColor="@color/Textcolor2"
+        android:gravity="center|left"/>
+
+    <ImageButton
+        android:id="@+id/HeaderMainMenuProfilPic"
+        android:background="@color/colorBar"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/ic_launcher_round" />
+
+        <!--android:text="@string/Profilname"-->
+        <!--android:textColor="@color/Textcolor2"-->
+
+
+    <Button
+        android:id="@+id/HeaderMainMenuProfilName"
+        android:background="@color/colorBar"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:text="@string/Profilname"
+        android:gravity="left|center"
+        android:textColor="@color/Textcolor2"/>
+
+</LinearLayout>

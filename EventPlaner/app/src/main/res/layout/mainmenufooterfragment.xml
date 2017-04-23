@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/TaskButtonMainMenu"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/colorBar"
+        android:text="@string/Taskstring"
+        android:textColor="@color/Textcolor1" />
+
+    <Button
+        android:id="@+id/NewEventButtonMainMenu"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:text="@string/NewEventstring"
+        android:textColor="@color/Textcolor1"
+        android:background="@color/colorBar"/>
+
+    <Button
+        android:id="@+id/SettingButtonMainMenu"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:text="@string/Settingstring"
+        android:textColor="@color/Textcolor2"
+        android:background="@color/colorBar"/>
+
+</LinearLayout>
