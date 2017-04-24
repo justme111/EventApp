@@ -1,13 +1,16 @@
 package gldev.eventplaner;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.TextViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import android.app.Activity;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.ImageButton;
 
 
@@ -16,12 +19,10 @@ import android.widget.ImageButton;
  */
 
 public class MainMenuHeaderFragment extends Fragment {
-    // kp was das macht ----------------------------------------
-    public static MainMenuHeaderFragment newInstance() {
 
-        return new MainMenuHeaderFragment();
-    }
-    // -------------------------------------------------------------
+    public static TextView EventText;
+
+
 
 
 
@@ -29,7 +30,7 @@ public class MainMenuHeaderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.mainmenuheaderfragment,
+        final View view =  inflater.inflate(R.layout.mainmenuheaderfragment,
                 container, false);
 
         // Create Button Function for ProfilPic-Button
@@ -45,18 +46,34 @@ public class MainMenuHeaderFragment extends Fragment {
         final Button ButtonProfilname =
                 (Button) view.findViewById(R.id.HeaderMainMenuProfilName);
         ButtonProfilname.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+            @Override
+            public void onClick(final View v) {
                 buttonClickedProfilName(v);
             }
         });
-
+        final TextView EventText =
+                (TextView) view.findViewById(R.id.HeaderMainMenuName);
         return view;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void buttonClickedPic (View view) {
+
 
     }
     public void buttonClickedProfilName (View view) {
-
+        TextView Text= (TextView) view.findViewById(R.id.HeaderMainMenuName);
     }
 
 
