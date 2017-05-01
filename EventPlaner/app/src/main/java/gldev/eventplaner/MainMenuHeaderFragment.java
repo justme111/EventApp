@@ -20,9 +20,10 @@ import android.widget.ImageButton;
 
 public class MainMenuHeaderFragment extends Fragment {
 
-    public static TextView EventText;
 
-
+    TextView EventText;
+    ImageButton ButtonPic;
+    Button ButtonProfilname;
 
 
 
@@ -47,8 +48,8 @@ public class MainMenuHeaderFragment extends Fragment {
                 (Button) view.findViewById(R.id.HeaderMainMenuProfilName);
         ButtonProfilname.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(final View v) {
-                buttonClickedProfilName(v);
+            public void onClick(final View view) {
+                buttonClickedProfilName(view);
             }
         });
         final TextView EventText =
@@ -72,8 +73,11 @@ public class MainMenuHeaderFragment extends Fragment {
 
 
     }
+
+
     public void buttonClickedProfilName (View view) {
         TextView Text= (TextView) view.findViewById(R.id.HeaderMainMenuName);
+        Text.setText("TEST");
     }
 
 
