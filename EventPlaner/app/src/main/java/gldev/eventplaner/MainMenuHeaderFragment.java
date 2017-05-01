@@ -18,7 +18,7 @@ import android.widget.ImageButton;
  * Created by Achim on 23.04.2017.
  */
 
-public class MainMenuHeaderFragment extends Fragment {
+public class MainMenuHeaderFragment extends Fragment implements View.OnClickListener {
 
 
     TextView EventText;
@@ -31,41 +31,33 @@ public class MainMenuHeaderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view =  inflater.inflate(R.layout.mainmenuheaderfragment,
-                container, false);
+        View view =  inflater.inflate(R.layout.mainmenuheaderfragment, container, false);
 
         // Create Button Function for ProfilPic-Button
-        final ImageButton ButtonPic =
-                (ImageButton) view.findViewById(R.id.HeaderMainMenuProfilPic);
-        ButtonPic.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                buttonClickedPic(v);
-            }
-        });
+        ImageButton ButtonPic = (ImageButton) view.findViewById(R.id.HeaderMainMenuProfilPic);
 
         // Create Button Function for ProfilName
-        final Button ButtonProfilname =
-                (Button) view.findViewById(R.id.HeaderMainMenuProfilName);
-        ButtonProfilname.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                buttonClickedProfilName(view);
-            }
-        });
-        final TextView EventText =
-                (TextView) view.findViewById(R.id.HeaderMainMenuName);
+        Button ButtonProfilname = (Button) view.findViewById(R.id.HeaderMainMenuProfilName);
+        ButtonProfilname.setOnClickListener(this);
+        TextView EventText = (TextView) view.findViewById(R.id.HeaderMainMenuName);
+
         return view;
     }
 
 
 
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case  R.id.HeaderMainMenuProfilName: {
+
+                TextView Text= (TextView) getView().findViewById(R.id.HeaderMainMenuProfilName);
+                Text.setText("TEST");
+                break;
+            }
 
 
-
-
-
-
-
+        }
+    }
 
 
 
@@ -75,10 +67,6 @@ public class MainMenuHeaderFragment extends Fragment {
     }
 
 
-    public void buttonClickedProfilName (View view) {
-        TextView Text= (TextView) view.findViewById(R.id.HeaderMainMenuName);
-        Text.setText("TEST");
-    }
 
 
 }
